@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Flight</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+</head>
+<body style="height: 2000px;">
+
+
+
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color:#353535;">
+      <div class="container">
+      <a 
+        href= "#" 
+        class="navbar-brand mb-0 h1">LuxuryFlight</span>
+      </a>
+    
+      <button 
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      class="navbar-toggler"
+      aria-controls="navbar-nav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      
+    
+    
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a href="#" class="nav-link active">
+              HOME
+            </a>
+          </li>
+    
+          <li class="nav-item active">
+            <a href="#" class="nav-link active">
+              RESERVATION
+            </a>
+          </li>
+    
+          <li class="nav-item active">
+            <a href="#" class="nav-link active">
+              PLANES
+            </a>
+          </li>
+    
+          <li class="nav-item active">
+            <a href="#" class="nav-link active">
+              PILOTS
+            </a>
+          </li>
+    
+          <li class="nav-item active">
+            <a href="#" class="nav-link active">
+              ABOUT US
+            </a>
+          </li>
+    
+          <li class="nav-item active">
+            <a href="#" class="nav-link active">
+              CONTACT
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+    <div style="width: 100%; height: auto;">
+      <img src="assets/private-jet.webp" alt="Image" style="width: 100%; height: auto;">
+      <div id="ReachNewHeights">
+        <h1>REACH NEW HEIGHTS</h1>
+    </div>
+
+    <div class="request-estimate">
+      <h2>Request an Instant Estimate</h2>
+      <div class="estimate-options">
+        <button class="option-button" onclick="toggleRoundTrip(false)">One Way</button>
+        <button class="option-button" onclick="toggleRoundTrip(true)">Round Trip</button>
+      </div>
+      <div class="search-area">
+        <input type="text" placeholder="From" class="search-input" id="from-airport" data-list="New York, Los Angeles, Chicago">
+        <input type="text" placeholder="To" class="search-input" id="to-airport" data-list="New York, Los Angeles, Chicago">
+        <input type="date" id="departure-date" class="date-input">
+        <input type="date" id="return-date" class="date-input" style="display: none;">
+        <button class="search-button" onclick="showFlightDetails()">Search</button>
+      </div>
+      <div id="error-message" class="error-message"></div>
+    </div>
+
+    </div>
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typeahead.js"></script>
+
+
+    <div class="modal" id="flightDetailsModal" tabindex="-1" aria-labelledby="flightDetailsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="flightDetailsModalLabel">Flight Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>From:</strong> <span id="modal-from"></span></p>
+            <p><strong>To:</strong> <span id="modal-to"></span></p>
+            <p><strong>Departure Date:</strong> <span id="modal-departure-date"></span></p>
+
+            <div class="form-group">
+              <label for="pilot-selection">Pilot Selection:</label>
+              <select class="form-control" id="pilot-selection">
+                <option value="">Choose a pilot</option>
+                <option value="John Doe">John Doe</option>
+                <option value="Jane Smith">Jane Smith</option>
+                <option value="David Johnson">David Johnson</option>
+                <!-- Add more pilot options as needed -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="plane-selection">Plane Selection:</label>
+              <select class="form-control" id="plane-selection">
+                <option value="">Choose a plane</option>
+                <option value="Boeing 747">Boeing 747</option>
+                <option value="Airbus A380">Airbus A380</option>
+                <option value="Gulfstream G650">Gulfstream G650</option>
+                <!-- Add more plane options as needed -->
+              </select>
+            </div>
+
+
+            <div class="form-group">
+              <label for="extra-instructions">Extra Instructions:</label>
+              <textarea class="form-control" id="extra-instructions" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="receiveConfirmation()">Receive Confirmation</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
