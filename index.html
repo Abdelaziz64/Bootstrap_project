@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
 </head>
-<body style="height: 2000px;">
+<body>
 
 
 
@@ -48,33 +49,37 @@
           </li>
     
           <li class="nav-item active">
-            <a href="#" class="nav-link active">
+            <a href="#request-estimate" class="nav-link active">
               RESERVATION
             </a>
           </li>
     
           <li class="nav-item active">
-            <a href="#" class="nav-link active">
+            <a href="airplanes.html" class="nav-link active">
               PLANES
             </a>
           </li>
     
           <li class="nav-item active">
-            <a href="#" class="nav-link active">
+            <a href="#pilot-section" class="nav-link active">
               PILOTS
             </a>
           </li>
     
           <li class="nav-item active">
-            <a href="#" class="nav-link active">
+            <a href="#about-us" class="nav-link active">
               ABOUT US
             </a>
           </li>
     
           <li class="nav-item active">
-            <a href="#" class="nav-link active">
+            <a href="#footer" class="nav-link active">
               CONTACT
             </a>
+          </li>
+
+          <li class="nav-item active">
+            <button id="language-button" onclick="changeLanguage()">FR/EN</button>
           </li>
         </ul>
       </div>
@@ -86,9 +91,10 @@
       <div id="ReachNewHeights">
         <h1>REACH NEW HEIGHTS</h1>
     </div>
+    </div>
 
-    <div class="request-estimate">
-      <h2>Request an Instant Estimate</h2>
+    <div class="request-estimate" id="request-estimate">
+      <h2>Book your trip</h2>
       <div class="estimate-options">
         <button class="option-button" onclick="toggleRoundTrip(false)">One Way</button>
         <button class="option-button" onclick="toggleRoundTrip(true)">Round Trip</button>
@@ -98,14 +104,65 @@
         <input type="text" placeholder="To" class="search-input" id="to-airport" data-list="New York, Los Angeles, Chicago">
         <input type="date" id="departure-date" class="date-input">
         <input type="date" id="return-date" class="date-input" style="display: none;">
-        <button class="search-button" onclick="showFlightDetails()">Search</button>
+        <button class="search-button" onclick="showFlightDetails()">book</button>
       </div>
       <div id="error-message" class="error-message"></div>
     </div>
 
-    </div>
-    
+    <h5 class="modal-title" id="pilot-section">Discover Our Pilots</h5>
+<div class="pilots-section">
+  <div class="pilot">
+    <img src="assets/pilote1.jpg" alt="Pilot 1" class="pilot-image" onclick="openPilotInfo('With a glint of adventure in his eyes and a daring spirit that knows no bounds, Captain Max Rivers is the embodiment of aviation excellence. He possesses an innate ability to navigate the skies with unparalleled precision and finesse. Each flight under his command is a testament to his unwavering dedication to safety and an exhilarating experience. Embark on a journey with Captain Max Rivers, and let him take you on an extraordinary airborne escapade beyond your wildest dreams.')">
   </div>
+  <div class="pilot">
+    <img src="assets/pilote2.jpg" alt="Pilot 2" class="pilot-image" onclick="openPilotInfo('Text for Pilot 2')">
+  </div>
+  <div class="pilot">
+    <img src="assets/pilote3.jpg" alt="Pilot 3" class="pilot-image" onclick="openPilotInfo('Text for Pilot 3')">
+  </div>
+</div>
+
+<div class="button-names">
+  <button type="button" class="btn btn-dark" onclick="openModal('Reynolds')">Captain Reynolds</button>
+  <button type="button" class="btn btn-dark" onclick="openModal('Max')">Captain Max</button>
+  <button type="button" class="btn btn-dark" onclick="openModal('Emily')">Captain Emily</button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="pilotModal" tabindex="-1" aria-labelledby="pilotModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-pilot-info"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div id="more-info-text" class="mt-3 text-center" >
+    <h2 id="about-us" >ABOUT US</h2>
+    <p>Welcome to LuxuryFlight: Where Exclusivity and Elegance Soar!</p>
+    <p>At LuxuryFlight, we believe that every journey should be a masterpiece of luxury and refinement. As a premier
+      private plane renting service, we offer discerning travelers an unparalleled experience in the world of
+      aviation. Our commitment to excellence is evident in every aspect of our operations, from the meticulously
+      curated fleet to the impeccable service provided by our dedicated team.</p>
+      <p>Whether you are traveling for business or pleasure, our team of experienced pilots and cabin crew are dedicated to providing you with an exceptional flight experience. From the moment you step onto the aircraft, you will be greeted by a warm and friendly staff who will attend to your every need. Our crew members are trained to anticipate your preferences, ensuring that your journey is tailored to your individual tastes and preferences.
+
+        As you settle into your plush leather seat, take a moment to appreciate the exquisite craftsmanship and attention to detail that defines our interior design. From hand-stitched leather upholstery to fine wood finishes, every element of our cabins exudes elegance and sophistication. Sink into the comfort of your seat, and let the gentle hum of the engines whisk you away to your destination.</p>
+  </div>
+
+
+
+
+
+    
+    
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/typeahead.js"></script>
@@ -123,10 +180,16 @@
             <p><strong>To:</strong> <span id="modal-to"></span></p>
             <p><strong>Departure Date:</strong> <span id="modal-departure-date"></span></p>
 
+
+            <div class="form-group">
+              <label for="user-name">Your Name:</label>
+              <input type="text" class="form-control" id="user-name" placeholder="Enter your name">
+            </div>
+
             <div class="form-group">
               <label for="pilot-selection">Pilot Selection:</label>
               <select class="form-control" id="pilot-selection">
-                <option value="">Choose a pilot</option>
+                <option value disabled="">Choose Pilot</option>
                 <option value="John Doe">John Doe</option>
                 <option value="Jane Smith">Jane Smith</option>
                 <option value="David Johnson">David Johnson</option>
@@ -137,7 +200,7 @@
             <div class="form-group">
               <label for="plane-selection">Plane Selection:</label>
               <select class="form-control" id="plane-selection">
-                <option value="">Choose a plane</option>
+                <option value disabled="">Choose Plane</option>
                 <option value="Boeing 747">Boeing 747</option>
                 <option value="Airbus A380">Airbus A380</option>
                 <option value="Gulfstream G650">Gulfstream G650</option>
@@ -150,12 +213,40 @@
               <label for="extra-instructions">Extra Instructions:</label>
               <textarea class="form-control" id="extra-instructions" rows="3"></textarea>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" onclick="receiveConfirmation()">Receive Confirmation</button>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button id="confirmation-button" type="button" class="btn btn-primary" onclick="receiveConfirmation()">Receive Confirmation</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Contact Us</h4>
+            <p>Phone number: (999)-999-9999</p>
+            <p>Email: Contact@luxuryflight.ca</p>
+            <p>Address: 75 Laurier Ave E, Ottawa, ON K1N 6N5</p>
+          </div>
+          <div class="col-lg-6 text-lg-end">
+            <h4>Business Hours</h4>
+            <p>24/7   Immediate assistance</p>
+
+          </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-auto">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
 

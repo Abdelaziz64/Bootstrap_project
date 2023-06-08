@@ -1,0 +1,219 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Flight</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+<body>
+
+  <nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color:#353535;">
+    <div class="container">
+    <a 
+      href= "#" 
+      class="navbar-brand mb-0 h1">LuxuryFlight</span>
+    </a>
+  
+    <button 
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    class="navbar-toggler"
+    aria-controls="navbar-nav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    
+  
+  
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a href="index.html#home" class="nav-link active">
+            HOME
+          </a>
+        </li>
+  
+        <li class="nav-item active">
+          <a href="index.html#request-estimate" class="nav-link active">
+            RESERVATION
+          </a>
+        </li>
+  
+        <li class="nav-item active">
+          <a href="airplanes.html" class="nav-link active">
+            PLANES
+          </a>
+        </li>
+  
+        <li class="nav-item active">
+          <a href="index.html##pilot-section" class="nav-link active">
+            PILOTS
+          </a>
+        </li>
+  
+        <li class="nav-item active">
+          <a href="index.html#about-us" class="nav-link active">
+            ABOUT US
+          </a>
+        </li>
+  
+        <li class="nav-item active">
+          <a href="index.html##footer" class="nav-link active">
+            CONTACT
+          </a>
+        </li>
+
+        <li class="nav-item active">
+          <button id="language-button" onclick="changeLanguage()">FR/EN</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+
+  <h1 class="text-center mb-4" id="title-planes">Available Private Planes</h1>
+
+
+  <main class="container mt-5">
+
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="assets/vey_light_jet.jpg" class="card-img-top" alt="Small Plane">
+          <div class="card-body">
+            <h5 class="card-title">Small Plane</h5>
+            <p class="card-text">Description of the small private plane.</p>
+            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#smallPlaneModal">View Details</button>
+          </div>
+        </div>
+      </div>
+
+        <!-- Modal for Small Plane -->
+  <div class="modal fade" id="smallPlaneModal" tabindex="-1" aria-labelledby="smallPlaneModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>capacity: 4 to 7 people</p>
+          <p>range: 1,211 nautical miles</p>
+          <p>lugage size: 70sq3</p>
+          <p>Price: 1,000-2,000$/hour</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="assets/medium-jet.png" class="card-img-top" alt="Medium Plane">
+      <div class="card-body">
+        <h5 class="card-title">Medium Plane</h5>
+        <p class="card-text">Description of the medium private plane.</p>
+        <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#mediumPlaneModal">View Details</button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal for Medium Plane -->
+  <div class="modal fade" id="mediumPlaneModal" tabindex="-1" aria-labelledby="mediumPlaneModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>capacity: 4 to 9 people</p>
+          <p>range: 1,936 nautical miles</p>
+          <p>lugage size: 93sq3</p>
+          <p>Price: 3,000-5,000$/hour</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="assets/large-jet.png" class="card-img-top" alt="Large Plane">
+      <div class="card-body">
+        <h5 class="card-title">Large Jet</h5>
+        <p class="card-text">Description of the medium private plane.</p>
+        <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#largePlaneModal">View Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="largePlaneModal" tabindex="-1" aria-labelledby="largePlaneModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>capacity: 11 to 25 people</p>
+          <p>range: 4,351 nautical miles</p>
+          <p>lugage size: 126sq3</p>
+          <p>Price: 5,000-10,000$/hour</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+  
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h4>Contact Us</h4>
+          <p>Phone number: (999)-999-9999</p>
+          <p>Email: Contact@luxuryflight.ca</p>
+          <p>Address: 75 Laurier Ave E, Ottawa, ON K1N 6N5</p>
+        </div>
+        <div class="col-lg-6 text-lg-end">
+          <h4>Business Hours</h4>
+          <p>24/7   Immediate assistance</p>
+
+        </div>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <div class="col-auto">
+          <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+
+  </body>
+
+  </html>
