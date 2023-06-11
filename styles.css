@@ -152,33 +152,7 @@
   margin-bottom: 40px;
 }
 
-footer {
-  background-color: #353535;
-  color: #ffffff;
-  padding: 20px 0;
-  margin-top: 100px;
-  margin-bottom: 20px;
-  height: 200px;
-}
 
-footer h4 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-footer p {
-  margin-bottom: 5px;
-}
-
-.social-icon {
-  color: #ffffff;
-  margin-right: 50px;
-  font-size: 3rem;
-}
-
-.last-row {
-  margin-bottom: 0;
-}
 
 
 
@@ -255,3 +229,52 @@ footer p {
   color: #ffffff !important;
 }
 
+#contact-us {
+  margin-left: 300px;
+}
+
+#business-hours {
+  margin-right: 280px;
+}
+
+#social-media {
+  text-align: center;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 10px;
+  color: white;
+  font-size: 2.5em;
+}
+
+.footer {
+  background-color: #353535;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  #contact-us,
+  #business-hours {
+    margin: 0;
+  }
+  
+  #social-media {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
