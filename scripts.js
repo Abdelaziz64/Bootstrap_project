@@ -1,4 +1,6 @@
 const cityAirports = {
+    "Casablanca": "CMN",
+    "Rabat": "RBT",
     "New York": "NYC",
     "Los Angeles": "LAX",
     "Chicago": "ORD",
@@ -138,12 +140,13 @@ const cityAirports = {
     const userName = document.getElementById("user-name").value; // Retrieve user's name
   
     // Create the flight details text with the user's name
-    const flightDetailsText = `Flight Details:
+    const flightDetailsText = `Thank you for choosing LuxuryFlight:
       Name: ${userName}
       From: ${fromAirport}
       To: ${toAirport}
       Departure Date: ${departureDate}
       Return Date: ${returnDate}
+      Time: 8:50pm
       Pilot: ${pilotSelection}
       Plane: ${planeSelection}
       `; // Include the user's name

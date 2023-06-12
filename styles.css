@@ -278,3 +278,12 @@
     align-items: center;
   }
 }
+
+#reviews{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 80px;
+
+}
